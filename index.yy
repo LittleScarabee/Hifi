@@ -186,15 +186,18 @@ EOF
 	    lmsvis=none
 	    cnvvis=none
 	    audvis=block
+	    netwvis=block
 	else
 	    if [ $role == full ]; then
 		lmsvis=block
 		audvis=block
 		cnvvis=block
+		netwvis=block
 	    else
 		lmsvis=block
 		cnvvis=block
 		audvis=none
+		netwvis=block
 	    fi
 	fi
 	
@@ -266,7 +269,7 @@ cat <<EOF
 	</div>
 	<div style="width:220px;float:left;">
 	<ul class="pageitem">
-		<li class="menu" id="netw" style="display:$lmsvis;"><a href="network.yy"><span class="name" style="padding-left:30px;">$mnu1</span></a></li>
+		<li class="menu" id="netw" style="display:$netwvis;"><a href="network.yy"><span class="name" style="padding-left:30px;">$mnu1</span></a></li>
 		<li class="menu" id="audi" style="display:$audvis;"><a href="audio.yy"><span class="name" style="padding-left:30px;">$mnu2</span></a></li>
 		<li class="menu" ><a href="kernel.yy"><span class="name" style="padding-left:30px;">$mnu3</span></a></li>
 		<li class="menu" ><a href="system.yy"><span class="name" style="padding-left:30px;">$mnu6</span></a></li>
