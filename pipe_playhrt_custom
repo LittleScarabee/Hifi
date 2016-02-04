@@ -1,0 +1,1 @@
+writeloop --block-size=8192 --file-size=49152 /tmp/b1 /tmp/b2 /tmp/b3 | catloop --block-size=8192 /tmp/b1 /tmp/b2 /tmp/b3 | playhrt -S -b 8192 -d hw:#device -s #rate -f #format -N#mmap
