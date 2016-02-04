@@ -253,7 +253,7 @@ do
     fi
     if [ "$line1" == "label" ]; then
 	label=$(cat $pathcpu/$line)
-	echo "<span>$label: ${input}Â°C (max ${krit}Â°C)</span><br>"
+	echo "<span>$label: ${input}°C (max ${krit}°C)</span><br>"
     fi
 done
 
