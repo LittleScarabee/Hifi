@@ -79,7 +79,7 @@ function changerole(a){
 	lms2.style.display = 'none';
 	lms3.style.display = 'none';
 	lms4.style.display = 'none';
-//	netw.style.display = 'block';
+	netw.style.display = 'block';
 	audi.style.display = 'block';
     }
     else {
@@ -89,7 +89,7 @@ function changerole(a){
 	    lms2.style.display = 'block';
 	    lms3.style.display = 'block';
 	    lms4.style.display = 'block';
-//	    netw.style.display = 'block';
+	    netw.style.display = 'block';
 	    audi.style.display = 'block';
 	}
 	else {
@@ -97,7 +97,7 @@ function changerole(a){
 	    lms2.style.display = 'block';
 	    lms3.style.display = 'block';
 	    lms4.style.display = 'block';
-//	    netw.style.display = 'block';
+	    netw.style.display = 'block';
 	    audi.style.display = 'none';
 	}
     }
