@@ -15,7 +15,7 @@ fileBootLocal="bootlocal.sh"
 fileSubmitAudio="submit_audio.yy"
 fileIndex="index.yy"
 
-urlGitHub="https://github.com/LittleScarabee/Hifi/blob/master/"
+urlGitHub="https://raw.githubusercontent.com/LittleScarabee/Hifi/master/"
 
 cd /tmp
 
