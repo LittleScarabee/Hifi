@@ -1,6 +1,6 @@
 #!/bin/sh
 echo "#####################"
-echo "#  Patch Tiny 1.1   #"
+echo "#  Patch Tiny 1.5   #"
 echo "#####################"
 echo ""
 folderPlayhrt="/home/tc/sq/"
@@ -18,7 +18,7 @@ fileCustomConvert="/home/custom-convert.conf"
 urlGitHub="https://raw.githubusercontent.com/LittleScarabee/Hifi/master/"
 
 cd /tmp
-
+echo " >>> START Update..."
 echo " >> Download all files..."
 sudo /usr/local/bin/wget $urlGitHub$fileBootLocal
 sudo /usr/local/bin/wget $urlGitHub$fileIndex
@@ -30,13 +30,13 @@ echo " >> Backup files..."
 sudo /bin/cp $folderBootLocal$fileBootLocal $folderBootLocal$fileBootLocal.bkp
 sudo /bin/cp $folderSubmitAudio$fileSubmitAudio $folderSubmitAudio$fileSubmitAudio.bkp
 sudo /bin/cp $folderIndex$fileIndex $folderIndex$fileIndex.bkp
-
+echo " > Done !"
 echo " >> Replace all files..."
 sudo /bin/cp /tmp/$filePlayhrt $folderPlayhrt$filePlayhrt
 sudo /bin/cp /tmp/$fileBootLocal $folderBootLocal$fileBootLocal
 sudo /bin/cp /tmp/$fileSubmitAudio $folderSubmitAudio$fileSubmitAudio
 sudo /bin/cp /tmp/$fileIndex $folderIndex$fileIndex
-
+echo " > Done !"
 echo " >> Apply right permissions for each files..."
 sudo /bin/chmod 755 $folderBootLocal$fileBootLocal
 sudo /bin/chown root:staff $folderBootLocal$fileBootLocal
@@ -46,10 +46,12 @@ sudo /bin/chmod 755 $folderSubmitAudio$fileSubmitAudio
 sudo /bin/chown root:root $folderSubmitAudio$fileSubmitAudio
 sudo /bin/chmod 755 $folderIndex$fileIndex
 sudo /bin/chown root:root $folderIndex$fileIndex
-
+echo " > Done !"
 echo " >> Add AIF Compatibily..."
 echo "##" >>$fileCustomConvert
 echo "## Aif Compatibility" >>$fileCustomConvert
 echo "##" >>$fileCustomConvert
 echo "aif pcm * *" >>$fileCustomConvert
 echo "        -" >>$fileCustomConvert
+echo " > Done !"
+echo " >>> END Update..."
