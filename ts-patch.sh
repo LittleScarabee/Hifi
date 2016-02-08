@@ -20,8 +20,7 @@ urlGitHub="https://raw.githubusercontent.com/LittleScarabee/Hifi/master/"
 cd /tmp
 printf ">>> START Update...\n"
 
-read -p "Do you want to update '$fileBootLocal' file ? [y/n] " 
-response
+read -p "Do you want to update '$fileBootLocal' file ? [y/n] " response
 echo
 if [[ $response == "y" || $response == "Y" || $response == "yes" || $response == "Yes" ]]
 then
@@ -50,8 +49,7 @@ then
   printf " Done !\n"
 fi
 
-read -p "Do you want to update '$fileIndex' file ? [y/n] " 
-response
+read -p "Do you want to update '$fileIndex' file ? [y/n] " response
 echo
 if [[ $response == "y" || $response == "Y" || $response == "yes" || $response == "Yes" ]]
 then
@@ -80,8 +78,7 @@ then
   printf " Done !\n"
 fi
 
-read -p "Do you want to update '$fileSubmitAudio' file ? [y/n] " 
-response
+read -p "Do you want to update '$fileSubmitAudio' file ? [y/n] " response
 echo
 if [[ $response == "y" || $response == "Y" || $response == "yes" || $response == "Yes" ]]
 then
@@ -110,8 +107,7 @@ then
   printf " Done !\n"
 fi
 
-read -p "Do you want to add '$filePlayhrt' file ? [y/n] " 
-response
+read -p "Do you want to add '$filePlayhrt' file ? [y/n] " response
 echo
 if [[ $response == "y" || $response == "Y" || $response == "yes" || $response == "Yes" ]]
 then
@@ -135,8 +131,7 @@ then
   printf " Done !\n"
 fi
 
-read -p "Do you want to add compatibility wit AIFF files ? [y/n] " 
-response
+read -p "Do you want to add compatibility wit AIFF files ? [y/n] " response
 echo
 if [[ $response == "y" || $response == "Y" || $response == "yes" || $response == "Yes" ]]
 then
