@@ -20,8 +20,7 @@ urlGitHub="https://raw.githubusercontent.com/LittleScarabee/Hifi/master/"
 cd /tmp
 printf ">>> START Update...\n"
 
-read -p "Do you want to update '$fileBootLocal' file ? (Y/N) "
--n 1 -r
+read -p "Do you want to update '$fileBootLocal' file ? [y/n] "-n 1 -r
 echo
 if [[ $REPLY =~ ^[Yy]$ ]]
 then
@@ -40,9 +39,10 @@ then
   printf " Done !\n"
 fi
 
-read -p "Do you want to update '$fileIndex' file ? Y/N" -n 1 -r
+read -p "Do you want to update '$fileIndex' file ? [y/n] " 
+response
 echo
-if [[ $REPLY =~ ^[Yy]$ ]]
+if [[ $response =~ ^(yes|y| ) ]]; 
 then
   printf " >> Download all files..."
   sudo /usr/local/bin/wget $urlGitHub$fileIndex
@@ -59,9 +59,10 @@ then
   printf " Done !\n"
 fi
 
-read -p "Do you want to update '$fileSubmitAudio' file ? Y/N" -n 1 -r
+read -p "Do you want to update '$fileSubmitAudio' file ? [y/n] " 
+response
 echo
-if [[ $REPLY =~ ^[Yy]$ ]]
+if [[ $response =~ ^(yes|y| ) ]];
 then
   printf " >> Download all files..."
   sudo /usr/local/bin/wget $urlGitHub$fileSubmitAudio
@@ -78,9 +79,10 @@ then
   printf " Done !\n"
 fi
 
-read -p "Do you want to add '$filePlayhrt' file ? Y/N" -n 1 -r
+read -p "Do you want to add '$filePlayhrt' file ? [y/n] " 
+response
 echo
-if [[ $REPLY =~ ^[Yy]$ ]]
+if [[ $response =~ ^(yes|y| ) ]];
 then
   printf " >> Download all files..."
   sudo /usr/local/bin/wget $urlGitHub$filePlayhrt
@@ -94,9 +96,10 @@ then
   printf " Done !\n"
 fi
 
-read -p "Do you want to add compatibility wit AIFF files ? Y/N" -n 1 -r
+read -p "Do you want to add compatibility wit AIFF files ? [y/n] " 
+response
 echo
-if [[ $REPLY =~ ^[Yy]$ ]]
+if [[ $response =~ ^(yes|y| ) ]];
 then
   printf " >> Add AIF Compatibily..."
   printf "##\n" >>$fileCustomConvert
