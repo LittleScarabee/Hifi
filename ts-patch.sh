@@ -26,26 +26,25 @@ if [[ $response == "y" || $response == "Y" || $response == "yes" || $response ==
 then
   printf " >> Download all files..."
   cmd = $(sudo /usr/local/bin/wget $urlGitHub$fileBootLocal)
-  echo $cmd
-  eval $cmd
+  _exec $cmd
   printf " >> Download completed...\n"
   printf " >> Backup files..."
   cmd = $(sudo /bin/cp $folderBootLocal$fileBootLocal $folderBootLocal$fileBootLocal.bkp)
   echo $cmd
-  eval $cmd
+  _exec $cmd
   printf " Done !\n"
   printf " >> Replace all files..."
   cmd = $(sudo /bin/cp /tmp/$fileBootLocal $folderBootLocal$fileBootLocal)
   echo $cmd
-  eval $cmd
+  _exec $cmd
   printf " Done !\n"
   printf " >> Apply right permissions for each files..."
   cmd = $(sudo /bin/chmod 755 $folderBootLocal$fileBootLocal)
   echo $cmd
-  eval $cmd
+  _exec $cmd
   cmd = $(sudo /bin/chown root:staff $folderBootLocal$fileBootLocal)
   echo $cmd
-  eval $cmd
+  _exec $cmd
   printf " Done !\n"
 fi
 
