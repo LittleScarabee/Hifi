@@ -20,7 +20,7 @@ urlGitHub="https://raw.githubusercontent.com/LittleScarabee/Hifi/master/"
 cd /tmp
 printf ">>> START Update...\n"
 
-read -p -r "Do you want to update '$fileBootLocal' file ? [y/n] " 
+read -p "Do you want to update '$fileBootLocal' file ? [y/n] " 
 response
 echo
 if [[ $response == "y" || $response == "Y" || $response == "yes" || $response == "Yes" ]]
