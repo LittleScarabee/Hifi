@@ -23,8 +23,7 @@ printf ">>> START Update...\n"
 read -p "Do you want to update '$fileBootLocal' file ? [y/n] " 
 response
 echo
-if [[ $response =~ ^(yes|y| ) ]];
-then
+if [[ $response =~ ^(yes|y| ) ]]; then
   printf " >> Download all files..."
   cmd = $(sudo /usr/local/bin/wget $urlGitHub$fileBootLocal)
   echo $cmd
@@ -53,8 +52,7 @@ fi
 read -p "Do you want to update '$fileIndex' file ? [y/n] " 
 response
 echo
-if [[ $response =~ ^(yes|y| ) ]]; 
-then
+if [[ $response =~ ^(yes|y| ) ]]; then
   printf " >> Download all files..."
   cmd = $(sudo /usr/local/bin/wget $urlGitHub$fileIndex)
   echo $cmd
@@ -83,8 +81,7 @@ fi
 read -p "Do you want to update '$fileSubmitAudio' file ? [y/n] " 
 response
 echo
-if [[ $response =~ ^(yes|y| ) ]];
-then
+if [[ $response =~ ^(yes|y| ) ]]; then
   printf " >> Download all files..."
   cmd = $(sudo /usr/local/bin/wget $urlGitHub$fileSubmitAudio)
   echo $cmd
@@ -113,8 +110,7 @@ fi
 read -p "Do you want to add '$filePlayhrt' file ? [y/n] " 
 response
 echo
-if [[ $response =~ ^(yes|y| ) ]];
-then
+if [[ $response =~ ^(yes|y| ) ]]; then
   printf " >> Download all files..."
   cmd = $(sudo /usr/local/bin/wget $urlGitHub$filePlayhrt)
   echo $cmd
@@ -138,8 +134,7 @@ fi
 read -p "Do you want to add compatibility wit AIFF files ? [y/n] " 
 response
 echo
-if [[ $response =~ ^(yes|y| ) ]];
-then
+if [[ $response =~ ^(yes|y| ) ]]; then
   printf " >> Add AIF Compatibily..."
   printf "##\n" >>$fileCustomConvert
   printf "## Aif Compatibility\n" >>$fileCustomConvert
