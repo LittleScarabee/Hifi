@@ -20,7 +20,8 @@ urlGitHub="https://raw.githubusercontent.com/LittleScarabee/Hifi/master/"
 cd /tmp
 printf ">>> START Update...\n"
 
-read -p "Do you want to update '$fileBootLocal' file ? Y/N" -n 1 -r
+read -p "Do you want to update '$fileBootLocal' file ? (Y/N) "
+-n 1 -r
 echo
 if [[ $REPLY =~ ^[Yy]$ ]]
 then
