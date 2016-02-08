@@ -48,10 +48,10 @@ sudo /bin/chmod 755 $folderIndex$fileIndex
 sudo /bin/chown root:root $folderIndex$fileIndex
 printf " Done !\n"
 printf " >> Add AIF Compatibily..."
-printf "##" >>$fileCustomConvert
-printf "## Aif Compatibility" >>$fileCustomConvert
-printf "##" >>$fileCustomConvert
-printf "aif pcm * *" >>$fileCustomConvert
-printf "        -" >>$fileCustomConvert
+printf "##\n" >>$fileCustomConvert
+printf "## Aif Compatibility\n" >>$fileCustomConvert
+printf "##\n" >>$fileCustomConvert
+printf "aif pcm * *\n" >>$fileCustomConvert
+printf "        -\n" >>$fileCustomConvert
 printf " Done !\n"
 printf ">>> END Update...\n"
