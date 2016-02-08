@@ -1,6 +1,6 @@
 #!/bin/sh
 printf "#####################\n"
-printf "#  Patch Tiny 1.8   #\n"
+printf "#  Patch Tiny 1.10   #\n"
 printf "#####################\n"
 printf "\n"
 folderPlayhrt="/home/tc/sq/"
@@ -20,22 +20,33 @@ urlGitHub="https://raw.githubusercontent.com/LittleScarabee/Hifi/master/"
 cd /tmp
 printf ">>> START Update...\n"
 
-read -p "Do you want to update '$fileBootLocal' file ? [y/n] "-n 1 -r
+read -p "Do you want to update '$fileBootLocal' file ? [y/n] " 
+response
 echo
-if [[ $REPLY =~ ^[Yy]$ ]]
+if [[ $response =~ ^(yes|y| ) ]];
 then
   printf " >> Download all files..."
-  sudo /usr/local/bin/wget $urlGitHub$fileBootLocal
+  cmd = $(sudo /usr/local/bin/wget $urlGitHub$fileBootLocal)
+  echo $cmd
+  eval $cmd
   printf " >> Download completed...\n"
   printf " >> Backup files..."
-  sudo /bin/cp $folderBootLocal$fileBootLocal $folderBootLocal$fileBootLocal.bkp
+  cmd = $(sudo /bin/cp $folderBootLocal$fileBootLocal $folderBootLocal$fileBootLocal.bkp)
+  echo $cmd
+  eval $cmd
   printf " Done !\n"
   printf " >> Replace all files..."
-  sudo /bin/cp /tmp/$fileBootLocal $folderBootLocal$fileBootLocal
+  cmd = $(sudo /bin/cp /tmp/$fileBootLocal $folderBootLocal$fileBootLocal)
+  echo $cmd
+  eval $cmd
   printf " Done !\n"
   printf " >> Apply right permissions for each files..."
-  sudo /bin/chmod 755 $folderBootLocal$fileBootLocal
-  sudo /bin/chown root:staff $folderBootLocal$fileBootLocal
+  cmd = $(sudo /bin/chmod 755 $folderBootLocal$fileBootLocal)
+  echo $cmd
+  eval $cmd
+  cmd = $(sudo /bin/chown root:staff $folderBootLocal$fileBootLocal)
+  echo $cmd
+  eval $cmd
   printf " Done !\n"
 fi
 
@@ -45,17 +56,27 @@ echo
 if [[ $response =~ ^(yes|y| ) ]]; 
 then
   printf " >> Download all files..."
-  sudo /usr/local/bin/wget $urlGitHub$fileIndex
+  cmd = $(sudo /usr/local/bin/wget $urlGitHub$fileIndex)
+  echo $cmd
+  eval $cmd
   printf " >> Download completed...\n"
   printf " >> Backup files..."
-  sudo /bin/cp $folderIndex$fileIndex $folderIndex$fileIndex.bkp
+  cmd = $(sudo /bin/cp $folderIndex$fileIndex $folderIndex$fileIndex.bkp)
+  echo $cmd
+  eval $cmd
   printf " Done !\n"
   printf " >> Replace all files..."
-  sudo /bin/cp /tmp/$fileIndex $folderIndex$fileIndex
+  cmd = $(sudo /bin/cp /tmp/$fileIndex $folderIndex$fileIndex)
+  echo $cmd
+  eval $cmd
   printf " Done !\n"
   printf " >> Apply right permissions for each files..."
-  sudo /bin/chmod 755 $folderIndex$fileIndex
-  sudo /bin/chown root:root $folderIndex$fileIndex
+  cmd = $(sudo /bin/chmod 755 $folderIndex$fileIndex)
+  echo $cmd
+  eval $cmd
+  cmd = $(sudo /bin/chown root:root $folderIndex$fileIndex)
+  echo $cmd
+  eval $cmd
   printf " Done !\n"
 fi
 
@@ -65,17 +86,27 @@ echo
 if [[ $response =~ ^(yes|y| ) ]];
 then
   printf " >> Download all files..."
-  sudo /usr/local/bin/wget $urlGitHub$fileSubmitAudio
+  cmd = $(sudo /usr/local/bin/wget $urlGitHub$fileSubmitAudio)
+  echo $cmd
+  eval $cmd
   printf " >> Download completed...\n"
   printf " >> Backup files..."
-  sudo /bin/cp $folderSubmitAudio$fileSubmitAudio $folderSubmitAudio$fileSubmitAudio.bkp
+  cmd = $(sudo /bin/cp $folderSubmitAudio$fileSubmitAudio $folderSubmitAudio$fileSubmitAudio.bkp)
+  echo $cmd
+  eval $cmd
   printf " Done !\n"
   printf " >> Replace all files..."
-  sudo /bin/cp /tmp/$fileSubmitAudio $folderSubmitAudio$fileSubmitAudio
+  cmd = $(sudo /bin/cp /tmp/$fileSubmitAudio $folderSubmitAudio$fileSubmitAudio)
+  echo $cmd
+  eval $cmd
   printf " Done !\n"
   printf " >> Apply right permissions for each files..."
-  sudo /bin/chmod 755 $folderSubmitAudio$fileSubmitAudio
-  sudo /bin/chown root:root $folderSubmitAudio$fileSubmitAudio
+  cmd = $(sudo /bin/chmod 755 $folderSubmitAudio$fileSubmitAudio)
+  echo $cmd
+  eval $cmd
+  cmd = $(sudo /bin/chown root:root $folderSubmitAudio$fileSubmitAudio)
+  echo $cmd
+  eval $cmd
   printf " Done !\n"
 fi
 
@@ -85,14 +116,22 @@ echo
 if [[ $response =~ ^(yes|y| ) ]];
 then
   printf " >> Download all files..."
-  sudo /usr/local/bin/wget $urlGitHub$filePlayhrt
+  cmd = $(sudo /usr/local/bin/wget $urlGitHub$filePlayhrt)
+  echo $cmd
+  eval $cmd
   printf " >> Download completed...\n"
   printf " >> Replace all files..."
-  sudo /bin/cp /tmp/$filePlayhrt $folderPlayhrt$filePlayhrt
+  cmd = $(sudo /bin/cp /tmp/$filePlayhrt $folderPlayhrt$filePlayhrt)
+  echo $cmd
+  eval $cmd
   printf " Done !\n"
   printf " >> Apply right permissions for each files..."
-  sudo /bin/chmod 644 $folderPlayhrt$filePlayhrt
-  sudo /bin/chown root:staff $folderPlayhrt$filePlayhrt
+  cmd = $(sudo /bin/chmod 644 $folderPlayhrt$filePlayhrt)
+  echo $cmd
+  eval $cmd
+  cmd = $(sudo /bin/chown root:staff $folderPlayhrt$filePlayhrt)
+  echo $cmd
+  eval $cmd
   printf " Done !\n"
 fi
 
