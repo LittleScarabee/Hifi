@@ -25,7 +25,7 @@ echo
 if [[ $response == "y" || $response == "Y" || $response == "yes" || $response == "Yes" ]]
 then
   printf " >> Download all files..."
-  cmd=$(sudo /usr/local/bin/wget $urlGitHub$fileBootLocal)
+  cmd=$(sudo /usr/local/bin/wget $urlGitHub$fileBootLocal -O $fileBootLocal)
   eval $cmd
   printf " >> Download completed...\n"
   printf " >> Backup files..."
@@ -53,7 +53,7 @@ echo
 if [[ $response == "y" || $response == "Y" || $response == "yes" || $response == "Yes" ]]
 then
   printf " >> Download all files..."
-  cmd=$(sudo /usr/local/bin/wget $urlGitHub$fileIndex)
+  cmd=$(sudo /usr/local/bin/wget $urlGitHub$fileIndex -O $fileIndex)
   echo $cmd
   eval $cmd
   printf " >> Download completed...\n"
@@ -82,7 +82,7 @@ echo
 if [[ $response == "y" || $response == "Y" || $response == "yes" || $response == "Yes" ]]
 then
   printf " >> Download all files..."
-  cmd=$(sudo /usr/local/bin/wget $urlGitHub$fileSubmitAudio)
+  cmd=$(sudo /usr/local/bin/wget $urlGitHub$fileSubmitAudio -O $fileSubmitAudio)
   echo $cmd
   eval $cmd
   printf " >> Download completed...\n"
@@ -111,7 +111,7 @@ echo
 if [[ $response == "y" || $response == "Y" || $response == "yes" || $response == "Yes" ]]
 then
   printf " >> Download all files..."
-  cmd=$(sudo /usr/local/bin/wget $urlGitHub$filePlayhrt)
+  cmd=$(sudo /usr/local/bin/wget $urlGitHub$filePlayhrt -O $filePlayhrt)
   echo $cmd
   eval $cmd
   printf " >> Download completed...\n"
