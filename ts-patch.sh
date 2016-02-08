@@ -1,6 +1,6 @@
 #!/bin/sh
 printf "#####################\n"
-printf "#  Patch Tiny 1.10   #\n"
+printf "#  Patch Tiny 1.11  #\n"
 printf "#####################\n"
 printf "\n"
 folderPlayhrt="/home/tc/sq/"
@@ -20,10 +20,11 @@ urlGitHub="https://raw.githubusercontent.com/LittleScarabee/Hifi/master/"
 cd /tmp
 printf ">>> START Update...\n"
 
-read -p "Do you want to update '$fileBootLocal' file ? [y/n] " 
+read -p -r "Do you want to update '$fileBootLocal' file ? [y/n] " 
 response
 echo
-if [[ $response =~ ^(yes|y| ) ]]; then
+if [[ $response == "y" || $response == "Y" || $response == "yes" || $response == "Yes" ]]
+then
   printf " >> Download all files..."
   cmd = $(sudo /usr/local/bin/wget $urlGitHub$fileBootLocal)
   echo $cmd
@@ -52,7 +53,8 @@ fi
 read -p "Do you want to update '$fileIndex' file ? [y/n] " 
 response
 echo
-if [[ $response =~ ^(yes|y| ) ]]; then
+if [[ $response == "y" || $response == "Y" || $response == "yes" || $response == "Yes" ]]
+then
   printf " >> Download all files..."
   cmd = $(sudo /usr/local/bin/wget $urlGitHub$fileIndex)
   echo $cmd
@@ -81,7 +83,8 @@ fi
 read -p "Do you want to update '$fileSubmitAudio' file ? [y/n] " 
 response
 echo
-if [[ $response =~ ^(yes|y| ) ]]; then
+if [[ $response == "y" || $response == "Y" || $response == "yes" || $response == "Yes" ]]
+then
   printf " >> Download all files..."
   cmd = $(sudo /usr/local/bin/wget $urlGitHub$fileSubmitAudio)
   echo $cmd
@@ -110,7 +113,8 @@ fi
 read -p "Do you want to add '$filePlayhrt' file ? [y/n] " 
 response
 echo
-if [[ $response =~ ^(yes|y| ) ]]; then
+if [[ $response == "y" || $response == "Y" || $response == "yes" || $response == "Yes" ]]
+then
   printf " >> Download all files..."
   cmd = $(sudo /usr/local/bin/wget $urlGitHub$filePlayhrt)
   echo $cmd
@@ -134,7 +138,8 @@ fi
 read -p "Do you want to add compatibility wit AIFF files ? [y/n] " 
 response
 echo
-if [[ $response =~ ^(yes|y| ) ]]; then
+if [[ $response == "y" || $response == "Y" || $response == "yes" || $response == "Yes" ]]
+then
   printf " >> Add AIF Compatibily..."
   printf "##\n" >>$fileCustomConvert
   printf "## Aif Compatibility\n" >>$fileCustomConvert
