@@ -1,6 +1,6 @@
 #!/bin/sh
 printf "#####################\n"
-printf "#  Patch Tiny 1.11  #\n"
+printf "#  Patch Tiny 1.12  #\n"
 printf "#####################\n"
 printf "\n"
 folderPlayhrt="/home/tc/sq/"
@@ -25,26 +25,26 @@ echo
 if [[ $response == "y" || $response == "Y" || $response == "yes" || $response == "Yes" ]]
 then
   printf " >> Download all files..."
-  cmd = $(sudo /usr/local/bin/wget $urlGitHub$fileBootLocal)
-  _exec $cmd
+  cmd=$(sudo /usr/local/bin/wget $urlGitHub$fileBootLocal)
+  eval $cmd
   printf " >> Download completed...\n"
   printf " >> Backup files..."
-  cmd = $(sudo /bin/cp $folderBootLocal$fileBootLocal $folderBootLocal$fileBootLocal.bkp)
+  cmd=$(sudo /bin/cp $folderBootLocal$fileBootLocal $folderBootLocal$fileBootLocal.bkp)
   echo $cmd
-  _exec $cmd
+  eval $cmd
   printf " Done !\n"
   printf " >> Replace all files..."
-  cmd = $(sudo /bin/cp /tmp/$fileBootLocal $folderBootLocal$fileBootLocal)
+  cmd=$(sudo /bin/cp /tmp/$fileBootLocal $folderBootLocal$fileBootLocal)
   echo $cmd
-  _exec $cmd
+  eval $cmd
   printf " Done !\n"
   printf " >> Apply right permissions for each files..."
-  cmd = $(sudo /bin/chmod 755 $folderBootLocal$fileBootLocal)
+  cmd=$(sudo /bin/chmod 755 $folderBootLocal$fileBootLocal)
   echo $cmd
-  _exec $cmd
-  cmd = $(sudo /bin/chown root:staff $folderBootLocal$fileBootLocal)
+  eval $cmd
+  cmd=$(sudo /bin/chown root:staff $folderBootLocal$fileBootLocal)
   echo $cmd
-  _exec $cmd
+  eval $cmd
   printf " Done !\n"
 fi
 
@@ -53,25 +53,25 @@ echo
 if [[ $response == "y" || $response == "Y" || $response == "yes" || $response == "Yes" ]]
 then
   printf " >> Download all files..."
-  cmd = $(sudo /usr/local/bin/wget $urlGitHub$fileIndex)
+  cmd=$(sudo /usr/local/bin/wget $urlGitHub$fileIndex)
   echo $cmd
   eval $cmd
   printf " >> Download completed...\n"
   printf " >> Backup files..."
-  cmd = $(sudo /bin/cp $folderIndex$fileIndex $folderIndex$fileIndex.bkp)
+  cmd=$(sudo /bin/cp $folderIndex$fileIndex $folderIndex$fileIndex.bkp)
   echo $cmd
   eval $cmd
   printf " Done !\n"
   printf " >> Replace all files..."
-  cmd = $(sudo /bin/cp /tmp/$fileIndex $folderIndex$fileIndex)
+  cmd=$(sudo /bin/cp /tmp/$fileIndex $folderIndex$fileIndex)
   echo $cmd
   eval $cmd
   printf " Done !\n"
   printf " >> Apply right permissions for each files..."
-  cmd = $(sudo /bin/chmod 755 $folderIndex$fileIndex)
+  cmd=$(sudo /bin/chmod 755 $folderIndex$fileIndex)
   echo $cmd
   eval $cmd
-  cmd = $(sudo /bin/chown root:root $folderIndex$fileIndex)
+  cmd=$(sudo /bin/chown root:root $folderIndex$fileIndex)
   echo $cmd
   eval $cmd
   printf " Done !\n"
@@ -82,25 +82,25 @@ echo
 if [[ $response == "y" || $response == "Y" || $response == "yes" || $response == "Yes" ]]
 then
   printf " >> Download all files..."
-  cmd = $(sudo /usr/local/bin/wget $urlGitHub$fileSubmitAudio)
+  cmd=$(sudo /usr/local/bin/wget $urlGitHub$fileSubmitAudio)
   echo $cmd
   eval $cmd
   printf " >> Download completed...\n"
   printf " >> Backup files..."
-  cmd = $(sudo /bin/cp $folderSubmitAudio$fileSubmitAudio $folderSubmitAudio$fileSubmitAudio.bkp)
+  cmd=$(sudo /bin/cp $folderSubmitAudio$fileSubmitAudio $folderSubmitAudio$fileSubmitAudio.bkp)
   echo $cmd
   eval $cmd
   printf " Done !\n"
   printf " >> Replace all files..."
-  cmd = $(sudo /bin/cp /tmp/$fileSubmitAudio $folderSubmitAudio$fileSubmitAudio)
+  cmd=$(sudo /bin/cp /tmp/$fileSubmitAudio $folderSubmitAudio$fileSubmitAudio)
   echo $cmd
   eval $cmd
   printf " Done !\n"
   printf " >> Apply right permissions for each files..."
-  cmd = $(sudo /bin/chmod 755 $folderSubmitAudio$fileSubmitAudio)
+  cmd=$(sudo /bin/chmod 755 $folderSubmitAudio$fileSubmitAudio)
   echo $cmd
   eval $cmd
-  cmd = $(sudo /bin/chown root:root $folderSubmitAudio$fileSubmitAudio)
+  cmd=$(sudo /bin/chown root:root $folderSubmitAudio$fileSubmitAudio)
   echo $cmd
   eval $cmd
   printf " Done !\n"
@@ -111,20 +111,20 @@ echo
 if [[ $response == "y" || $response == "Y" || $response == "yes" || $response == "Yes" ]]
 then
   printf " >> Download all files..."
-  cmd = $(sudo /usr/local/bin/wget $urlGitHub$filePlayhrt)
+  cmd=$(sudo /usr/local/bin/wget $urlGitHub$filePlayhrt)
   echo $cmd
   eval $cmd
   printf " >> Download completed...\n"
   printf " >> Replace all files..."
-  cmd = $(sudo /bin/cp /tmp/$filePlayhrt $folderPlayhrt$filePlayhrt)
+  cmd=$(sudo /bin/cp /tmp/$filePlayhrt $folderPlayhrt$filePlayhrt)
   echo $cmd
   eval $cmd
   printf " Done !\n"
   printf " >> Apply right permissions for each files..."
-  cmd = $(sudo /bin/chmod 644 $folderPlayhrt$filePlayhrt)
+  cmd=$(sudo /bin/chmod 644 $folderPlayhrt$filePlayhrt)
   echo $cmd
   eval $cmd
-  cmd = $(sudo /bin/chown root:staff $folderPlayhrt$filePlayhrt)
+  cmd=$(sudo /bin/chown root:staff $folderPlayhrt$filePlayhrt)
   echo $cmd
   eval $cmd
   printf " Done !\n"
